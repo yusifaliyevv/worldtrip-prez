@@ -65,6 +65,10 @@ const Travels = () => {
     }));
   };
 
+  const capitalize = (str) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
   const handleBooking = async (travelCode) => {
     try {
       const result = await Swal.fire({
@@ -148,7 +152,7 @@ const Travels = () => {
             <div key={travel._id} className={styles.card}>
               <Link to={`/travel/${travel._id}`} className={styles.cardLink}>
                 <h2 className={styles.cardTitle}>
-                  {travel.from.city}, {travel.from.country} ➔ {travel.to.city},{" "}
+                  {capitalize(travel.from.city)}, {travel.from.country} ➔ {travel.to.city},{" "}
                   {travel.to.country}
                 </h2>
               </Link>

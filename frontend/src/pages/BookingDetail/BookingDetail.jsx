@@ -170,10 +170,10 @@ const BookingDetail = () => {
           <FaMoneyBillWave /> Payment Information
         </h3>
         <p>
-          <strong>Total Price:</strong> {booking.totalPrice} AZN
+          <strong>Total Price:</strong> {booking.totalPrice.toFixed(2)} USD
         </p>
         <p>
-          <strong>Price per Person:</strong> {booking.travel.price} AZN
+          <strong>Price per Person:</strong> {booking.travel.price.toFixed(2)} USD
         </p>
         <p>
           <strong>Status:</strong>{" "}

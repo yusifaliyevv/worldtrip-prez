@@ -7,7 +7,8 @@ export const createCheckoutSession = async (req, res) => {
   const { bookingCode } = req.body;
 
   try {
-    const booking = await Booking.findOne({ bookingCode }).populate("travel");
+    // travel və user-ı da populate et ki, booking.user.toString() işləsin
+    const booking = await Booking.findOne({ bookingCode }).populate("travel").populate("user");
     if (!booking) {
       return res.status(404).json({ message: "Booking tapılmadı" });
     }
@@ -18,12 +19,12 @@ export const createCheckoutSession = async (req, res) => {
       line_items: [
         {
           price_data: {
-            currency: "usd",
+            currency: "usd", // lazım olsa "azn"-ə dəyiş
             product_data: {
               name: `${booking.travel.from.city} ➡ ${booking.travel.to.city}`,
               description: `${booking.travel.name} (${booking.numberOfPeople} nəfər)`
             },
-            unit_amount: booking.totalPrice * 100,
+            unit_amount: Math.round(booking.totalPrice * 100), // tam ədəd olmalı
           },
           quantity: 1,
         },
@@ -32,11 +33,11 @@ export const createCheckoutSession = async (req, res) => {
       cancel_url: `${process.env.CLIENT_LINK}/cancel`,
       metadata: {
         bookingCode: booking.bookingCode,
-        userId: booking.user.toString(),
+        userId: booking.user._id.toString(),
       },
     });
 
-    res.json({ url: session.url }); // redirect üçün
+    res.json({ url: session.url });
   } catch (err) {
     console.error("Stripe xətası:", err.message);
     res.status(500).json({ message: "Ödəniş baş tutmadı", error: err.message });

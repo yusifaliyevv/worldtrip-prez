@@ -7,7 +7,6 @@ import path from "path";
 import moment from "moment-timezone";
 
 
-// Yeni rezervasiya yarat
 export const createBooking = async (req, res) => {
   try {
     const { travelCode, numberOfPeople } = req.body;
@@ -57,7 +56,7 @@ export const getUserBookings = async (req, res) => {
 
 
 
-// Booking yenilə
+
 export const updateBooking = async (req, res) => {
   const { id } = req.params;
   const { numberOfPeople } = req.body;
@@ -97,7 +96,6 @@ export const updateBooking = async (req, res) => {
 };
 
 
-// Booking sil
 export const deleteBooking = async (req, res) => {
   try {
     const booking = await Booking.findById(req.params.id).populate("travel");
@@ -133,7 +131,6 @@ export const getAllBookings = async (req, res) => {
 
 
 
-// Booking detail gətir
 export const getBookingById = async (req, res) => {
   try {
     const booking = await Booking.findById(req.params.id)
@@ -144,7 +141,6 @@ export const getBookingById = async (req, res) => {
       return res.status(404).json({ message: "reservation not found" });
     }
 
-    // İstifadəçi öz bookinginə baxırmı?
     if (booking.user._id.toString() !== req.user.id) {
       return res.status(403).json({ message: "You do not have permission to view this reservation." });
     }
