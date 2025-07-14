@@ -77,6 +77,14 @@ Cost: $XX per person
 
 Requirements:
 
+Hotel recommendations with price ranges and booking links
+
+Local SIM cards or WiFi options
+
+Weather-appropriate packing lists
+
+Emergency contacts and embassy information
+
 Budget: ${budget} USD total
 
 Use original language for place names (e.g., Tower of London, Louvre Museum)
