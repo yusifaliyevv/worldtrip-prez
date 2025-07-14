@@ -1,0 +1,92 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.card {
+  background-color: #1e2a38;
+  padding: 5rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 620px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.title {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input {
+  padding: 0.9rem 1rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  background-color: #2c3e50;
+  color: #ffffff;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.input::placeholder {
+  color: #bdc3c7;
+}
+
+.input:focus {
+  background-color: #34495e;
+}
+
+.button {
+  padding: 0.9rem;
+  background-color: #3498db;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+
+/* Mövcud stillər */
+
+.forgotPassword {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.forgotPassword a {
+  color: #5dade2;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.forgotPassword a:hover {
+  color: #2e86c1;
+  text-decoration: underline;
+}

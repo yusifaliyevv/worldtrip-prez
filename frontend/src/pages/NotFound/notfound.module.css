@@ -1,0 +1,53 @@
+@keyframes shake {
+  0% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+  100% { transform: rotate(-5deg); }
+}
+
+.notFoundContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #f5f5f5;
+  color: #1a1a1a;
+  padding: 20px;
+}
+
+.robotIcon {
+  font-size: 80px;
+  animation: shake 1.5s infinite ease-in-out;
+  margin-bottom: 10px;
+}
+
+.code {
+  font-size: 96px;
+  font-weight: bold;
+  color: #f25c54;
+  margin: 0;
+}
+
+.message {
+  font-size: 22px;
+  margin: 10px 0 30px;
+  color: #3f7cac;
+  max-width: 400px;
+}
+
+.homeLink {
+  text-decoration: none;
+  color: #fff;
+  background-color: #f9b24e;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.homeLink:hover {
+  background-color: #ffd166;
+  transform: translateY(-2px);
+}

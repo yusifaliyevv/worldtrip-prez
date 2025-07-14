@@ -1,0 +1,90 @@
+.settingsContainer {
+  max-width: 700px;
+  margin: 3rem auto;
+  background: #1f2937; /* tünd, müasir */
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.settingsContainer h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  font-weight: 700;
+  color: #60a5fa;
+  letter-spacing: 1.5px;
+}
+
+.settingsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.settingsForm div {
+  display: flex;
+  flex-direction: column;
+}
+
+.settingsForm label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #a5b4fc;
+}
+
+.settingsForm input[type="text"],
+.settingsForm input[type="email"],
+.settingsForm input[type="password"],
+.settingsForm input[type="file"] {
+  padding: 0.65rem 1rem;
+  border-radius: 12px;
+  border: none;
+  background-color: #374151;
+  color: #f9fafb;
+  font-size: 1rem;
+  outline-offset: 2px;
+  outline-color: transparent;
+  transition: outline-color 0.3s ease, background-color 0.3s ease;
+}
+
+.settingsForm input[type="text"]:focus,
+.settingsForm input[type="email"]:focus,
+.settingsForm input[type="password"]:focus,
+.settingsForm input[type="file"]:focus {
+  outline-color: #60a5fa;
+  background-color: #4b5563;
+}
+
+.imagePreview {
+  margin-top: 1rem;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px #3b82f6;
+  border: 2px solid #2563eb;
+  align-self: center;
+}
+
+.settingsForm button {
+  margin-top: 1.8rem;
+  padding: 0.9rem;
+  background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
+  border: none;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.6);
+  transition: background 0.4s ease;
+}
+
+.settingsForm button:hover {
+  background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+  box-shadow: 0 8px 25px rgba(96, 165, 250, 0.7);
+}

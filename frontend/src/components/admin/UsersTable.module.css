@@ -1,0 +1,98 @@
+.tableWrapper {
+  padding: 30px;
+  background-color: #f0f0f0; /* açıq neytral fon */
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1B263B; /* tünd mavi-göy mətnlər */
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #F4D35E; /* premium qızılı vurğu */
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px; /* sətirlər arası boşluq */
+  background-color: transparent;
+}
+
+.table thead tr th {
+  text-align: left;
+  padding: 15px 20px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #415A77; /* açıq boz-mavi başlıqlar */
+  user-select: none;
+  border-bottom: 2px solid #d1d9e6;
+}
+
+.table tbody tr {
+  background-color: #ffffff;
+  box-shadow: 0 3px 8px rgba(27, 38, 59, 0.1);
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.table tbody tr:hover {
+  box-shadow: 0 6px 15px rgba(244, 211, 94, 0.4); /* vurğu kölgəsi */
+}
+
+.table tbody tr td {
+  padding: 15px 20px;
+  vertical-align: middle;
+  font-size: 15px;
+  color: #1B263B;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: 8px 14px;
+  margin-right: 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.admin {
+  background-color: #F4D35E;
+  color: #1B263B;
+}
+
+.admin:hover {
+  background-color: #d4b945;
+}
+
+.premium {
+  background-color: #415A77;
+  color: #F0F0F0;
+}
+
+.premium:hover {
+  background-color: #2e4160;
+}
+
+.delete {
+  background-color: #e63946;
+  color: #fff;
+}
+
+.delete:hover {
+  background-color: #b32a33;
+}
+
+.loading,
+.error {
+  font-size: 18px;
+  color: #415A77;
+  text-align: center;
+  margin-top: 50px;
+  user-select: none;
+}

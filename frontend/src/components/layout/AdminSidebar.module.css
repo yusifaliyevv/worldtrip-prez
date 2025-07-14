@@ -1,0 +1,59 @@
+.sidebar {
+  width: 240px;
+  background: #1B263B; /* tünd mavi-göy, dərinlik və zənginlik */
+  color: #F0F0F0; /* ağ, gözəl kontrast */
+  padding: 30px 20px;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.4);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: 1.2px;
+  color: #F4D35E; /* işıqlı qızılı/bej, premium vurğu */
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  padding: 14px 20px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  user-select: none;
+  color: #BFC7D5; /* açıq boz-mavi */
+}
+
+.menu li:hover {
+  background-color: #415A77; /* açıq boz-mavi hover */
+  color: #F4D35E; /* vurğu rəngi */
+  font-weight: 600;
+}
+
+.menu li.active {
+  background-color: #F4D35E; /* vurğu rəngi */
+  color: #1B263B; /* tünd fon rənginə qarşı tərs */
+  font-weight: 700;
+  box-shadow: 0 0 10px #F4D35Eaa;
+}
+
+.icon {
+  margin-right: 14px;
+  font-size: 20px;
+  flex-shrink: 0;
+}

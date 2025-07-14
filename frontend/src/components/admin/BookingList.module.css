@@ -1,0 +1,96 @@
+/* BookingList.module.css */
+
+.container {
+  padding: 40px;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1B263B;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #F4D35E;
+  margin-bottom: 30px;
+  user-select: none;
+}
+
+/* === TABLE CONTAINER === */
+.tableContainer {
+  background-color: #ffffff;
+  padding: 25px 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(27, 38, 59, 0.12);
+  overflow-x: auto;
+}
+
+/* === TABLE === */
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 14px;
+  font-size: 16px;
+  color: #1B263B;
+}
+
+.table thead tr th {
+  text-align: left;
+  padding: 18px 20px;
+  font-weight: 700;
+  font-size: 17px;
+  color: #415A77;
+  border-bottom: 2px solid #d1d9e6;
+  user-select: none;
+}
+
+.table tbody tr {
+  background-color: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(65, 90, 119, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.table tbody tr:hover {
+  box-shadow: 0 6px 20px rgba(244, 211, 94, 0.35);
+}
+
+.table tbody tr td {
+  padding: 15px 20px;
+  vertical-align: middle;
+}
+
+/* === LOADING & ERROR === */
+.loading,
+.error {
+  font-size: 18px;
+  color: #415A77;
+  text-align: center;
+  margin-top: 50px;
+  user-select: none;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  .table thead {
+    display: none;
+  }
+
+  .table tbody tr {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .table tbody tr td {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    border-bottom: 1px solid #d1d9e6;
+  }
+
+  .table tbody tr td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: #415A77;
+  }
+}

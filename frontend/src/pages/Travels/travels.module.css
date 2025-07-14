@@ -1,0 +1,170 @@
+/* Ümumi container */
+.content {
+  min-height: 100vh;
+  padding: 2rem 1rem 3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0e7ff;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Başlıq */
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin: 2.4rem 0;
+  letter-spacing: 1.3px;
+}
+
+/* Filter form */
+.filterForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.filterForm input {
+  flex: 1 1 180px;
+  max-width: 240px;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: none;
+  background-color: #1e293b;
+  color: #e0e7ff;
+  font-size: 1rem;
+  box-shadow: inset 0 0 8px rgba(59, 130, 246, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  outline-offset: 2px;
+  outline-color: transparent;
+}
+
+.filterForm input::placeholder {
+  color: #9ca3af;
+}
+
+.filterForm input:focus {
+  background-color: #334155;
+  outline-color: #60a5fa;
+}
+
+/* Error və Not Found mesajları */
+.error, .notFound {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #f87171; /* qırmızı */
+  margin-top: 2rem;
+}
+
+/* Kartlar konteyneri */
+.cardsWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.6rem 2rem;
+}
+
+/* Hər bir kart */
+.card {
+  background-color: #1e293b;
+  border-radius: 20px;
+  padding: 1.6rem 1.4rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 40px rgba(59, 130, 246, 0.7);
+}
+
+/* Link üçün */
+.cardLink {
+  text-decoration: none;
+  color: #93c5fd;
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-bottom: 0.7rem;
+  display: block;
+  letter-spacing: 0.5px;
+}
+
+.cardLink:hover {
+  text-decoration: underline;
+}
+
+/* Kartın digər məlumatları */
+.cardInfo {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 1.2rem;
+}
+
+.price {
+  font-weight: 700;
+  color: #60a5fa;
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Rezervasiya düyməsi */
+.bookButton {
+  background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
+  border: none;
+  border-radius: 16px;
+  padding: 0.9rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.8);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bookButton:hover {
+  background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+  box-shadow: 0 12px 30px rgba(96, 165, 250, 0.9);
+}
+
+/* Pagination */
+.pagination {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  user-select: none;
+}
+
+.pagination button {
+  background-color: #334155;
+  border: none;
+  border-radius: 14px;
+  padding: 0.5rem 1.5rem;
+  color: #e0e7ff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: inset 0 0 6px rgba(59, 130, 246, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  background-color: #1e293b;
+  color: #64748b;
+  box-shadow: none;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #60a5fa;
+  color: #0f172a;
+}
